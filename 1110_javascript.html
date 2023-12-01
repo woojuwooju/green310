@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_엘리먼트</title>
+</head>
+<body>
+
+    <section class="todoList">
+        <h1>오늘 저녁에 할 일</h1>
+            <ul id="list"></ul>
+        
+    </section>
+
+    <section class="weekendList">
+        <h1>주말에 할일</h1>
+            <ul id="weekend"></ul>
+            <form action="#" id="form">
+                <input type="text" name="list">
+                <input type="submit" value="검색">
+            </form>
+    </section>
+
+
+    <script>
+
+        document.getElementById('form').onsubmit = function(){
+            console.log('클릭했습니다.');
+            var txt = document.getElementById('form').list.value;
+            console.log(txt);
+            return false;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        var todo = ['잠자기','마사지받기','게임하기','장보기','티비보기','넷플릭스보기','디즈니플러스보기','빨래하기']
+        todo.push('청소하기')
+        console.log(todo)
+        console.log(todo.length)
+        console.log(todo[3-1])
+
+        for(var i = 0; i<todo.length; i++){
+            var li =  document.createElement('li');
+            li.textContent = todo[i];
+            document.getElementById('list').appendChild(li)
+        }
+    </script>
+
+    <script>
+        var weekend = ['트리꾸미기','양념게장만들기','칼만사에서 점심먹기','배드민턴치기','청소하기','게임하기']
+        weekend.push('바닥물걸레청소하기')
+        console.log(weekend)
+        console.log(weekend.length)
+        console.log(weekend[3-1])
+
+        for(var i = 0; i<weekend.length; i++){
+            var li =  document.createElement('li');
+            li.textContent = weekend[i];
+            document.getElementById('weekend').appendChild(li)}
+    </script>
+
+
+
+</body>
+</html>

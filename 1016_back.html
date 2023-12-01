@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백그라운드속성</title>
+</head>
+<body>
+
+    <h1>백그라운드속성</h1>
+    <p>background : 속성에 한줄에 작성가능 작성시 순서는 관계 없으며 띄어쓰기로 구분함</p>
+
+    <h3>상세속성</h3>
+    <ul>
+        <li><b>background-color</b> : 색깔을 넣어줌</li>
+        <li><b>background-image</b> : 배경이미지를 넣어줌 url('이미지경로주소')-따옴표 생략가능</li>
+        <li><b>background-repeat</b> : repeat / repeat-x(가로반복) / repeat-y(세로반복) / no-repeat(반복없음)</li>
+        <li><b>background-position</b> : 이미지를 넣었을 경우 위치를 조정<br> 수평(left/right/center) 수직(top/bottom/center) left top을 기준으로 수치값으로도 이동가능</li>
+        <li><b>background-size</b> : 이미지의 크기 <br> cover(요소 안에 배경이미지를 꽉 채움-화질이 깨지거나 이미지가 잘려나올 수 있음) 클리핑마스크비슷 <br>
+            contain(이미지가 잘리지 않은 상태에서 화면을 꽉채움 여백 생길 수 있음) 크기, %로도 나타낼 수 있음</li>
+        <li><b>background-attachment</b> : 배경이미지고정 scroll(올라감) / fixed(고정됨 left/top 00 기준)</li>
+    </ul>
+
+    <h3>예제</h3>
+    <ul class="apple">
+        <li>우주사과</li>
+        <li>규림사과</li>
+        <li>수영사과</li>
+    </ul>
+
+    <div class="applebox"><p>사과의 효능 <br> 피부를 맑고 희게 가꿔주고 아침사과로 먹을 경우 좋다</p></div>
+
+
+    <style>
+        .apple {list-style: none;}
+        .apple li {padding: 20px;
+            margin-bottom: 10px;
+            background-color: aqua;
+            background-image: url('img/apple_001.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: -20px -5px;
+            text-indent: 50px;}
+
+        .applebox {width: 500px;
+                height: 400px;
+                background-image: url(img/apple_002.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: flex-end;}
+        .applebox p {background-color: rgba(255, 72, 121, 0.8);
+                    color: #fff;
+                    margin: 0;
+                    padding: 10px;
+                    width: 100%;}
+
+                
+    </style>
+    
+</body>
+</html>
